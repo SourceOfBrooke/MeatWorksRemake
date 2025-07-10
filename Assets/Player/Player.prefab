@@ -249,8 +249,8 @@ Transform:
   m_GameObject: {fileID: 5009833245547244169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.09, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.274, y: 1.274, z: 1.274}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6995254385262199518}
@@ -286,7 +286,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70a12efd90c5f304aa6aca8c6e84df5c, type: 2}
+  - {fileID: 2100000, guid: 1ec6a7e0f429f6a4db1313768d6f3bdb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -370,8 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76e3ecf00793d54f9f5d260303dc473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 7696483139090600189}
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 7203555246891742956}
+  walkSpeed: 3
 --- !u!1 &6883733988849903637
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ Transform:
   m_GameObject: {fileID: 6883733988849903637}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

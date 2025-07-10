@@ -11,14 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public CameraMovement playerCamera;
     public float walkSpeed;
     GameObject player;
-
+    Vector3 pos;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         player =  GetComponent<GameObject>();
-
+        
     }
     
     // Update is called once per frame
@@ -26,10 +26,23 @@ public class PlayerMovement : MonoBehaviour
     {
         // rotate the dang player model on the Y axis!!
         rb.transform.rotation = Quaternion.Euler(0, playerCamera.yRotation, 0);
-        float dirWS = Input.GetAxisRaw("Vertical") * Time.deltaTime * walkSpeed;
+        if (Input.GetKey(KeyCode.W)) 
+        {
+            transform.Translate(transform.forward * walkSpeed * Time.deltaTime, Space.World);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(transform.forward * -walkSpeed * Time.deltaTime, Space.World);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(transform.right * walkSpeed * Time.deltaTime, Space.World);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(transform.right * -walkSpeed * Time.deltaTime, Space.World);
+        }
 
-        
-        
     }
 
     
